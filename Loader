@@ -1,24 +1,6 @@
--- ============================================================
--- IceLatte LOADER (key gate)
--- This is the PUBLIC script your users run.
---
--- USAGE (what your users paste in their executor):
---
---   getgenv().key = "XXXX-XXXX-XXXX-XXXX"
---   loadstring(game:HttpGet("https://raw.githubusercontent.com/YOU/REPO/main/loader.lua"))()
---
--- If the key is missing / wrong / expired / locked to another device,
--- the player is KICKED with a reason.
---
--- Replace the CONFIG values below before publishing.
--- ============================================================
-
-local API_BASE   = "https://latteclient-67.onrender.com"        -- your Render URL (no trailing slash)
+local API_BASE   = "https://latteclientscript-1.onrender.com"        -- your Render URL (no trailing slash)
 local API_SECRET = "314942852849948194857818785219589215781585281758218484748828289"    -- must match .env API_SECRET
--- (The client source is now served by your API at /script, so there's no
---  GitHub raw link to expire. Just push LatteClient.Lua next to index.js.)
 
--- Strip any accidental trailing slash so we never build a "//verify" URL.
 API_BASE = API_BASE:gsub("/+$", "")
 
 -- ---- services ---------------------------------------------
