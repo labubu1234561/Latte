@@ -14,14 +14,6 @@ local function kick(reason)
     error("[IceLatte] " .. reason, 0)
 end
 
--- ---- game check -------------------------------------------
--- IceLatte is built for Rivals only. Bail out anywhere else so users
--- don't waste a key load / hit errors in the wrong game.
-local RIVALS_PLACE_ID = 17625359962
-if game.PlaceId ~= RIVALS_PLACE_ID then
-    kick("This script only works in Rivals.")
-end
-
 -- ---- executor compatibility shims -------------------------
 -- Madium needs a gethui() that points at CoreGui, otherwise the menu
 -- can fail to parent correctly.
